@@ -15,14 +15,6 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="5b125" class="javax.swing.JLabel" binding="centerlabel">
-            <constraints border-constraint="Center"/>
-            <properties>
-              <horizontalAlignment value="0"/>
-              <horizontalTextPosition value="0"/>
-              <text value="CENTER"/>
-            </properties>
-          </component>
           <component id="c94bc" class="javax.swing.JLabel" binding="eastlabel">
             <constraints border-constraint="East"/>
             <properties>
@@ -54,6 +46,16 @@
               <horizontalTextPosition value="0"/>
               <text value="NORTH"/>
             </properties>
+          </component>
+          <component id="53205" class="javax.swing.JButton" binding="CENTERButton" default-binding="true">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <horizontalTextPosition value="0"/>
+              <text value="CENTER"/>
+            </properties>
+            <clientProperties>
+              <html.disable class="java.lang.Boolean" value="false"/>
+            </clientProperties>
           </component>
         </children>
       </grid>
