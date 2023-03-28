@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="MainForm">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="mainWindow">
   <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
@@ -8,24 +8,30 @@
     <properties/>
     <border type="none"/>
     <children>
-      <grid id="706a3" layout-manager="BorderLayout" hgap="0" vgap="0">
+      <grid id="5eac" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
         <border type="none"/>
         <children>
-          <component id="4b6b4" class="javax.swing.JLabel">
+          <component id="5b125" class="javax.swing.JLabel" binding="centerlabel">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <text value="CENTER"/>
+            </properties>
+          </component>
+          <component id="c94bc" class="javax.swing.JLabel" binding="eastlabel">
             <constraints border-constraint="East"/>
             <properties>
-              <background color="-16777216"/>
-              <enabled value="true"/>
               <horizontalAlignment value="0"/>
               <horizontalTextPosition value="0"/>
               <text value="EAST"/>
             </properties>
           </component>
-          <component id="77a6c" class="javax.swing.JLabel">
+          <component id="ac6bf" class="javax.swing.JLabel" binding="westlabel">
             <constraints border-constraint="West"/>
             <properties>
               <horizontalAlignment value="0"/>
@@ -33,15 +39,7 @@
               <text value="WEST"/>
             </properties>
           </component>
-          <component id="eef0" class="javax.swing.JLabel">
-            <constraints border-constraint="North"/>
-            <properties>
-              <horizontalAlignment value="0"/>
-              <horizontalTextPosition value="0"/>
-              <text value="NORTH"/>
-            </properties>
-          </component>
-          <component id="a38" class="javax.swing.JLabel">
+          <component id="d4654" class="javax.swing.JLabel" binding="southlabel">
             <constraints border-constraint="South"/>
             <properties>
               <horizontalAlignment value="0"/>
@@ -49,13 +47,12 @@
               <text value="SOUTH"/>
             </properties>
           </component>
-          <component id="49b4e" class="javax.swing.JLabel">
-            <constraints border-constraint="Center"/>
+          <component id="19a51" class="javax.swing.JLabel" binding="northlabel">
+            <constraints border-constraint="North"/>
             <properties>
               <horizontalAlignment value="0"/>
               <horizontalTextPosition value="0"/>
-              <text value="CENTER"/>
-              <verticalTextPosition value="0"/>
+              <text value="NORTH"/>
             </properties>
           </component>
         </children>
