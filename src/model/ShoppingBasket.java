@@ -8,6 +8,7 @@ import java.util.Map;
 public class ShoppingBasket {
     private Map<String, Article> articles;
 
+
     // Constructeur
     public ShoppingBasket() {
         articles = new HashMap<String, Article>();
