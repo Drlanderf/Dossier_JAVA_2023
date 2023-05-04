@@ -1,5 +1,5 @@
-<h1 align=center>PROJECT_NAME</h1>
-<h3 align="center">BRIEF_PROJECT_DESC </h3>
+<h1 align=center>Caisse Manager</h1>
+<h3 align="center">Une caisse enregisteuse java basic évolutive</h3>
 <h3 align="center">
 
 ![](https://komarev.com/ghpvc/?username=DrLanderf&label=Views&color=lightgrey)
