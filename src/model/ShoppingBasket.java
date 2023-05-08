@@ -6,14 +6,25 @@ import java.util.List;
 import java.util.Map;
 
 public class ShoppingBasket {
+    // Propriétés
     private Map<String, Article> articles;
 
+
     // Constructeur
+
+    /**
+     * Constructeur d'initialisation par défaut ;
+     * @key : code-barre de l'objet Article
+     */
     public ShoppingBasket() {
         articles = new HashMap<String, Article>();
     }
 
-    // Méthode pour ajouter un article au panier
+    /**
+     * Ajouter un article au panier
+     * @param article
+     * @param quantite
+     */
     public void ajouterArticle(Article article, int quantite) {
         Article articleExistant = articles.get(article.getCodeBarre());
         if (articleExistant != null) {
@@ -24,17 +35,25 @@ public class ShoppingBasket {
         }
     }
 
-    // Méthode pour supprimer un article du panier
+    /**
+     * Supprimer un objet Article du panier
+     * @param article
+     */
     public void supprimerArticle(Article article) {
         articles.remove(article.getCodeBarre());
     }
 
-    // Méthode pour vider le panier
+    /**
+     * Vider l'entiereté du panier
+     */
     public void viderPanier() {
         articles.clear();
     }
 
-    // Méthode pour obtenir le nombre d'articles dans le panier
+    /**
+     * getNombreArticles
+     * @return le nombre total d'articles dans le panier
+     */
     public int getNombreArticles() {
         int total = 0;
         for (Article article : articles.values()) {
@@ -43,7 +62,10 @@ public class ShoppingBasket {
         return total;
     }
 
-    // Méthode pour obtenir le montant total HTVA du panier
+    /**
+     * getMontantTotalHTVA
+     * @return le montant total (HTVA) du panier
+     */
     public double getMontantTotalHTVA() {
         double total = 0.0;
         for (Article article : articles.values()) {
@@ -52,7 +74,10 @@ public class ShoppingBasket {
         return total;
     }
 
-    // Méthode pour obtenir le montant total TVAC du panier
+    /**
+     * getMontantTotalTVAC
+     * @return le montant total (TVAC) du panier
+     */
     public double getMontantTotalTVAC() {
         double total = 0.0;
         for (Article article : articles.values()) {
@@ -60,11 +85,19 @@ public class ShoppingBasket {
         }
         return total;
     }
-    // Méthode pour obtenir la liste des articles du panier
+
+    /**
+     * getArticles
+     * @return Liste des articles
+     */
     public List<Article> getArticles() {
         return new ArrayList<Article>(articles.values());
     }
-    // Méthode pour afficher les détails de tous les articles dans le panier
+
+    /**
+     * surcharge de la méthode toString
+     * @return ShoppingBasket sous forme de String
+     */
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
