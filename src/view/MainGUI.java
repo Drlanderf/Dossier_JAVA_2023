@@ -1,8 +1,14 @@
 package view;
 
 import controler.Controle;
+import model.Article;
+import model.ShoppingBasket;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class MainGUI extends JFrame {
     // Propriétés
@@ -63,5 +69,26 @@ public class MainGUI extends JFrame {
      */
     public MainGUI(Controle controle) {
         super("Ma boutique");
+
         this.controle = controle;
+
+
+
+
+        add(mainPanel);
+        setSize(800, 600);
+        setVisible(true);
+
+
+
+
+        //Gestion fermeture application
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                controle.exitApplication();
+            }
+        });
+
 }}

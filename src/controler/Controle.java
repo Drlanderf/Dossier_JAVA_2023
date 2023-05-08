@@ -24,4 +24,11 @@ public class Controle {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Gestion de fermeture d'application
+     */
+    public void exitApplication() {
+        System.exit(0);
+    }
 }
