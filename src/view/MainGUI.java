@@ -1,17 +1,21 @@
 package view;
 
+import controler.Controle;
+
 import javax.swing.*;
 
 public class MainGUI extends JFrame {
-    private JPanel mainPanel;
-    /* ------------------------------------------------------------
-          gestions du shoppingBasket
-         ------------------------------------------------------------ */
-    private JPanel shoppingBasketPanel;
+    // Propriétés
+    private Controle controle;
 
-    /* ------------------------------------------------------------
-          gestions du keyPad
-         ------------------------------------------------------------ */
+    /**
+     * JPanel de base
+     */
+    private JPanel mainPanel;
+
+    /**
+     * Gestion du KeyPad
+     */
     private JPanel keyPadPanel;
     private JButton a7Button;
     private JButton a8Button;
@@ -28,9 +32,10 @@ public class MainGUI extends JFrame {
     private JButton a0Button;
     private JButton PointButton;
     private JButton ENTERButton;
-    /* ------------------------------------------------------------
-          gestions du shoppingBasket manager
-         ------------------------------------------------------------ */
+
+    /**
+     * Coeur de l'application
+     */
     private JPanel shoppingBasketManagerPanel;
     private JTextField qtyTempField;
     private JTextField cbTempField;
@@ -42,10 +47,21 @@ public class MainGUI extends JFrame {
     private JButton suprimerDuPanierButton;
     private JTextField a000TextField;
     private JTextField a000TextField1;
-    private JTable table1;
-    private JButton button1;
-    private JButton button2;
 
-    public MainGUI() {
+    /**
+     * Gestions du shoppingBasket
+     */
+    private JPanel shoppingBasketPanel;
+    private JTable shoppingBasketTable;
+    private JButton TICKETButton;
+    private JButton FACTUREButton;
+
+    // Constructeurs
+    /**
+     * Constructeur d'initialisation
+     * @param controle
+     */
+    public MainGUI(Controle controle) {
         super("Ma boutique");
+        this.controle = controle;
 }}

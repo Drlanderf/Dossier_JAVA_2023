@@ -4,19 +4,28 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Ticket {
-
+    // Propriétés
     private ShoppingBasket basket;
     private Date date;
     private String cashier;
 
     // Constructeur
+
+    /**
+     * Constructeur d'initialisation total
+     * @param basket
+     * @param cashier
+     */
     public Ticket(ShoppingBasket basket, String cashier) {
         this.basket = basket;
         this.date = new Date();
         this.cashier = cashier;
     }
 
-    // Méthode pour obtenir le contenu du ticket
+    /**
+     *
+     * @return le contenu du ticket
+     */
     public String getContents() {
         StringBuilder sb = new StringBuilder();
         sb.append("Ticket de caisse \n");
