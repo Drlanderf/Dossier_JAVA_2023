@@ -12,7 +12,7 @@ public class ShoppingBasket {
     // Constructeur
     public ShoppingBasket() {
         articles = new HashMap<String, Article>();
-    }
+    } //la key est le codebarre
 
     // Méthode pour ajouter un article au panier
     public void ajouterArticle(Article article, int quantite) {
