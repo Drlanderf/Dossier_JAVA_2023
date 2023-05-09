@@ -27,12 +27,12 @@ public class Controle {
             Properties prop = new Properties();
             prop.load(new FileInputStream("resources/config.properties"));
             this.nomFenetre = (String)prop.get("APP_NAME");
-            //System.out.println("Le nom de l'application est : "+this.nomFenetre );
+            //System.out.println("[Debug config.properties controler] Le nom de l'application est : "+this.nomFenetre );
         } catch(FileNotFoundException e){
-            System.out.println("Erreur ! Fichier non trouve... lors de la récupération du nom de la fenetre");
+            System.out.println("[config.properties controler] Erreur ! Fichier non trouve... "+e);
 
         } catch (IOException e){
-            System.out.println("Erreur d'IO lors de la récupération du nom de la fenetre");
+            System.out.println("[config.properties controler] Erreur d'IO : "+e);
         }
 
 
@@ -41,7 +41,7 @@ public class Controle {
             mainGUI = new MainGUI(this);
             mainGUI.setVisible(true);
         } catch (Exception e){
-            e.printStackTrace();
+            System.out.println("[mainGUI controler] Erreur lors de la tentative de création : "+e);
         }
     }
     //Setters et getters
