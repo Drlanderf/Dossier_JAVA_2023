@@ -68,9 +68,9 @@ public class MainGUI extends JFrame {
      * @param controle
      */
     public MainGUI(Controle controle) {
-        super("Ma boutique");
-
         this.controle = controle;
+        setTitle(this.controle.getNomFenetre());
+
 
 
 
