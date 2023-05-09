@@ -1,10 +1,12 @@
 package controler;
 
+import model.Article;
 import view.MainGUI;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Map;
 import java.util.Properties;
 
 public class Controle {
@@ -34,6 +36,7 @@ public class Controle {
         } catch (IOException e){
             System.out.println("[config.properties controler] Erreur d'IO : "+e);
         }
+
 
 
 

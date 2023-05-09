@@ -14,7 +14,7 @@ public class Article {
      * @param quantite
      * @param codeBarre
      */
-    public Article(String nom, double prixHT, int quantite, String codeBarre) {
+    public Article(String codeBarre,String nom, double prixHT, int quantite) {
         this.nom = nom;
         this.prixHTVA = prixHT;
         this.quantite = quantite;
