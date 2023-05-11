@@ -92,7 +92,8 @@ public class Article {
      * @return Prix TTC (double)
      */
     public double getPrixTVAC() {
-        return prixHTVA * 1.21;
+        double prixTVAC = prixHTVA * 1.21;
+        return Math.round(prixTVAC * 100.0) / 100.0;
     }
 
     /**

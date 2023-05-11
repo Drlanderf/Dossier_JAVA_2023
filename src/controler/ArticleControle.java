@@ -46,6 +46,7 @@ public class ArticleControle {
             Article article = entry.getValue();
             System.out.println("Nom: " + article.getNom());
             System.out.println("Prix HTVA: " + article.getPrixHTVA());
+            System.out.println("Prix TVAC: " + article.getPrixTVAC());
             System.out.println("Quantité: " + article.getQuantite());
             System.out.println("----------------------------");
         }
