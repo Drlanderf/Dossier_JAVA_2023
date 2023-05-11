@@ -31,12 +31,14 @@ public class ArticleControle {
                 Article article = new Article(codeBarre, nom, prixHTVA, quantite);
                 articles.put(codeBarre, article);
             }
-        } catch(FileNotFoundException e){
+        }
+        catch(FileNotFoundException e){
             System.out.println("[ArticleControle]  Erreur ! Fichier non trouve... "+e);
         }
-
-        catch (IOException e) {
+        catch (IOException e){
             System.out.println("[ArticleControle] Erreur d'IO : "+e);
+        } catch (Exception e){
+            System.out.println("[ArticleControle] Erreur : "+e);
         }
     }
 
