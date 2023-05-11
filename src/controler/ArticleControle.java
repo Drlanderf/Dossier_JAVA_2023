@@ -12,7 +12,10 @@ import java.util.Map;
 public class ArticleControle {
     private HashMap<String, Article> articles = new HashMap<>();
 
-
+    /**
+     * @ordre_du_csv : Code barre,Nom,Prix HTVA,Quantite
+     * @param filename
+     */
     public ArticleControle(String filename) {
         try{
             FileReader fr = new FileReader(filename);
