@@ -14,7 +14,7 @@ public class Article {
      * @param quantite
      * @param codeBarre
      */
-    public Article(String nom, double prixHT, int quantite, String codeBarre) {
+    public Article(String codeBarre,String nom, double prixHT, int quantite) {
         this.nom = nom;
         this.prixHTVA = prixHT;
         this.quantite = quantite;
@@ -92,7 +92,8 @@ public class Article {
      * @return Prix TTC (double)
      */
     public double getPrixTVAC() {
-        return prixHTVA * 1.21;
+        double prixTVAC = prixHTVA * 1.21;
+        return Math.round(prixTVAC * 100.0) / 100.0;
     }
 
     /**

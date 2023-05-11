@@ -1,5 +1,6 @@
 package view;
 
+import controler.ArticleControle;
 import controler.Controle;
 import model.Article;
 import model.ShoppingBasket;
@@ -13,6 +14,7 @@ import java.awt.event.WindowEvent;
 public class MainGUI extends JFrame {
     // Propriétés
     private Controle controle;
+    private ArticleControle Acontrole;
 
     /**
      * JPanel de base
@@ -70,6 +72,8 @@ public class MainGUI extends JFrame {
     public MainGUI(Controle controle) {
         this.controle = controle;
         setTitle(this.controle.getNomFenetre());
+        this.Acontrole = new ArticleControle("resources/Articles.CSV");
+        //Acontrole.afficherArticles();
 
 
 
