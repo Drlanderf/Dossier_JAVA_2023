@@ -73,10 +73,7 @@ public class MainGUI extends JFrame {
         this.controle = controle;
         setTitle(this.controle.getNomFenetre());
         this.Acontrole = new ArticleControle("resources/Articles.CSV");
-        //Acontrole.afficherArticles();
-
-
-
+        //Acontrole.afficherArticles(); //<=== DebugLine
 
 
         add(mainPanel);
@@ -94,5 +91,5 @@ public class MainGUI extends JFrame {
                 controle.exitApplication();
             }
         });
-
-}}
+    }
+}
