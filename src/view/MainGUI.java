@@ -8,6 +8,8 @@ import model.ShoppingBasket;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
@@ -82,8 +84,61 @@ public class MainGUI extends JFrame {
 
 
 
+    /* ------------------------------------------------------------
+		Event listener for keypad (0 -> 9)
+	   ------------------------------------------------------------ */
+        ActionListener buttonListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JButton button = (JButton) e.getSource();
+                String buttonText = button.getText();
+                cbTempField.setText(cbTempField.getText() + buttonText);
+            }
+        };
+        a0Button.addActionListener(buttonListener);
+        a1Button.addActionListener(buttonListener);
+        a2Button.addActionListener(buttonListener);
+        a3Button.addActionListener(buttonListener);
+        a4Button.addActionListener(buttonListener);
+        a5Button.addActionListener(buttonListener);
+        a6Button.addActionListener(buttonListener);
+        a7Button.addActionListener(buttonListener);
+        a8Button.addActionListener(buttonListener);
+        a9Button.addActionListener(buttonListener);
+    /* ------------------------------------------------------------
+		Event listener for keypad (MultiplyButton)
+	   ------------------------------------------------------------ */
+        MultiplyButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String cbText = cbTempField.getText().trim();
+                int cbValue = 0;
 
-        //Gestion fermeture application
+                // Vérifier si le texte est un nombre valide
+                try {
+                    cbValue = Integer.parseInt(cbText);
+                }
+                catch (NumberFormatException ex) {
+                    System.out.println("[MainGUI.MultiplyButton EVENT] Erreur : "+e);
+                    // Le texte n'est pas un nombre valide
+                    // Gérer l'erreur selon vos besoins
+                    return;
+                }
+                // Limiter le nombre à 2 chiffres maximum
+                cbValue = Math.min(cbValue, 99);
+                // Mettre à jour le qtyTempField avec la valeur limitée
+                qtyTempField.setText(String.valueOf(cbValue));
+                // Supprimer le contenu du cbTempField
+                cbTempField.setText("");
+            }
+        });
+
+
+
+
+    /* ------------------------------------------------------------
+		Event listener for keypad (Close Window)
+	   ------------------------------------------------------------ */
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
             @Override
