@@ -4,12 +4,18 @@ import controler.ArticleControle;
 import controler.Controle;
 import model.Article;
 import model.ShoppingBasket;
+import model.ShoppingBasketTableModel;
 
 import javax.swing.*;
+import javax.swing.table.JTableHeader;
+import javax.swing.table.TableColumn;
+import javax.swing.table.TableColumnModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.List;
 
 public class MainGUI extends JFrame {
     // Propriétés
@@ -77,6 +83,8 @@ public class MainGUI extends JFrame {
         setTitle(this.controle.getNomFenetre());
         this.Acontrole = new ArticleControle("resources/Articles.CSV");
         //Acontrole.afficherArticles(); //<=== DebugLine
+
+
 
 
         add(mainPanel);
@@ -165,6 +173,7 @@ public class MainGUI extends JFrame {
                 if (article == null) {
                     // Article non trouvé, afficher un message d'erreur
                     JOptionPane.showMessageDialog(null, "Article non trouvé", "Erreur", JOptionPane.ERROR_MESSAGE);
+                    clearFields();
                 } else {
                     String qtyInput = qtyTempField.getText();
 
@@ -242,6 +251,15 @@ public class MainGUI extends JFrame {
                 }
             }
         });
+
+
+
+
+
+     /* ------------------------------------------------------------
+		//TODO : travailler sur la JTABLE
+	   ------------------------------------------------------------ */
+
 
 
 
