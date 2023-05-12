@@ -53,16 +53,16 @@ public class MainGUI extends JFrame {
      * Coeur de l'application
      */
     private JPanel shoppingBasketManagerPanel;
-    private JTextField qtyTempField;
-    private JTextField cbTempField;
+    public JTextField qtyTempField;
+    public JTextField cbTempField;
     private JLabel qtyLabel;
     private JLabel descriptionLabel;
-    private JTextField qty;
-    private JTextField description;
+    public JTextField qty;
+    public JTextField description;
     private JButton ajouterAuPanierButton;
     private JButton suprimerDuPanierButton;
-    private JTextField prixTot;
-    private JTextField prixUnit;
+    public JTextField prixTot;
+    public JTextField prixUnit;
 
     /**
      * Gestions du shoppingBasket
@@ -274,7 +274,7 @@ public class MainGUI extends JFrame {
             }
         });
     /* ------------------------------------------------------------
-		Event listener for keypad (Close Window)
+		Event listener (Close Window)
 	   ------------------------------------------------------------ */
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
@@ -300,4 +300,5 @@ public class MainGUI extends JFrame {
         prixUnit.setText("0.00");
         prixTot.setText("0.00");
     }
+
 }
