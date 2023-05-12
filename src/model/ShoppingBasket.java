@@ -115,6 +115,21 @@ public class ShoppingBasket {
         sb.append(String.format("Total TVAC : %.2f euros\n", getMontantTotalTVAC()));
         return sb.toString();
     }
+    public void afficherPanier() {
+        System.out.println("Panier :");
+        System.out.printf("%-15s%-25s%-15s%-15s%-15s\n", "Code barre", "Nom", "Prix HTVA", "Prix TVAC", "Quantité");
+        for (Article article : articles.values()) {
+            System.out.printf("%-15s%-25s%-15.2f%-15.2f%-15d\n",
+                    article.getCodeBarre(),
+                    article.getNom(),
+                    article.getPrixHTVA(),
+                    article.getPrixTVAC(),
+                    article.getQuantite());
+        }
+        System.out.printf("Total HTVA : %.2f euros\n", getMontantTotalHTVA());
+        System.out.printf("Total TVAC : %.2f euros\n", getMontantTotalTVAC());
+    }
+
 }
 
 
